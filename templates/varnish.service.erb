@@ -22,7 +22,9 @@ LimitMEMLOCK=82000
 # Maximum size of the corefile. 
 LimitCORE=infinity
 
+<% if $::osfamily == 'RedHat' %>
 EnvironmentFile=/etc/varnish/varnish.params
+<% end %>
 
 Type=forking
 PIDFile=/var/run/varnish.pid
