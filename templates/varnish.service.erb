@@ -22,7 +22,7 @@ LimitMEMLOCK=82000
 # Maximum size of the corefile. 
 LimitCORE=infinity
 
-<% if $::osfamily == 'RedHat' %>
+<% if @['os']['family'] == 'RedHat' %>
 EnvironmentFile=/etc/varnish/varnish.params
 <% end %>
 
