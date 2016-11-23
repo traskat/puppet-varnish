@@ -24,6 +24,8 @@ LimitCORE=infinity
 
 <% if @osfamily == 'RedHat' %>
 EnvironmentFile=/etc/varnish/varnish.params
+<% elsíf @osfamily == 'Debian' %>
+EnvironmentFile=/etc/default/varnish
 <% end %>
 
 Type=forking
