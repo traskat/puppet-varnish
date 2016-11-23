@@ -24,7 +24,7 @@ LimitCORE=infinity
 
 <% if @osfamily == 'RedHat' %>
 EnvironmentFile=/etc/varnish/varnish.params
-<% elsíf @osfamily == 'Debian' %>
+<% elsif @osfamily == 'Debian' %>
 EnvironmentFile=/etc/default/varnish
 <% end %>
 
